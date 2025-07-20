@@ -30,3 +30,13 @@ export const readJokeById = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+export const readRandomJoke = async (req, res) => {
+  try {
+    const jokes = await Joke.findAll();
+    const randomIndex = Math.floor(Math.random() * jokes.length);
+    const randomJoke = jokes[randomIndex];
+    res.status(200).json(randomJoke);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
