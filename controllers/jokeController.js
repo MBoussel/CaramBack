@@ -10,3 +10,11 @@ export const createJoke = async (req, res) => {
         res.status(400).json({err: "Erreur lors de l'ajout de la blague"})
     }
 };
+export const getAllJokes = async (req, res) => {
+  try {
+    const jokes = await Joke.findAll();
+    res.status(200).json(jokes);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
