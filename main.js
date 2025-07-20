@@ -2,7 +2,7 @@ import "dotenv/config"
 import app from "./app.js"
 import { sequelize } from "./models/jokeModel.js";
 
-const port = process.env.APP_PORT; 
+const port = process.env.PORT || process.env.APP_PORT; 
 
 sequelize.sync().then(() => {
   console.log(" BDD synchronisée");
