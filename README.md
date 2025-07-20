@@ -1,1 +1,20 @@
 # CaramBack
+API Carambar & co By Mattheus - Backend
+Cette API REST permet de gérer des blagues (CRUD basique) pour un projet de sélection . Elle est construite avec Node.js, Express, Sequelize et SQLite.
+
+Fonctionnalités
+Ajout d’une blague (POST /api/blagues)
+
+Consultation de toutes les blagues (GET /api/blagues)
+
+Consultation d’une blague par ID (GET /api/blagues/:id)
+
+Consultation d’une blague aléatoire (GET /api/blagues/random)
+
+API versionnée avec architecture MVC
+
+Documentation complète avec Swagger accessible à /api-docs
+
+Base de données SQLite gérée via Sequelize ORM
+
+Déploiement prévu sur Render.com
